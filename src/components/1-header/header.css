@@ -1,0 +1,211 @@
+
+/*/////////////////////
+
+table of contents
+////////////////////
+
+1-Header Design
+2-Button & Icons
+3-Model == pop up
+4-Responsive
+
+
+*/
+
+
+
+
+
+
+
+/*//////////////////////   1-Header Design   ////////////////////*/
+
+header.flex{
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+}
+
+header.flex nav {
+    background-color: var(--bgheader);
+    padding: .77rem 1.6rem;
+    border-radius: 55px;
+    margin: auto;
+    box-shadow: 1px 1px 10px 4px red;
+}
+
+.light header.flex nav{
+   background-color: var(--bgheader);
+    padding: .77rem 1.6rem;
+    border-radius: 55px;
+    margin: auto;
+  box-shadow: none
+}
+
+header ul.flex{
+    gap: 19px;
+}
+
+header ul li a{
+    color:var(--title);
+    opacity: .9;
+    font-size: .88rem;
+    font-weight: bold;
+}
+
+header ul li a:hover{
+    color:var(--blue);
+    opacity: 1;
+    font-size: .9rem;
+    
+}
+
+
+
+header button{
+    font-size: 16px;
+    
+}
+
+
+
+
+
+ header button.menu{
+    display: none;
+    cursor: pointer;
+}  
+
+
+/*//////////////   2-iconBUtton  /////////////*/
+
+header  .change-mode , button.mode{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:var(--bgheader);
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    color: var(--suptitle);
+    border: 1px solid rgba(244, 165, 96, 0.249);
+    transition: .2s;
+    box-shadow: 1px 1px 40px rgba(35  ,35 , 36, .165);
+     
+    
+}
+
+header .orange{
+  color: rgb(255, 165, 0);
+}
+
+
+header  .change-mode:hover , button.mode:hover{
+    color: var(--title);
+    border: 1px solid rgb(244, 165, 96);
+
+}
+
+
+header .close-model{
+font-size: 1.3rem;
+color: var(--suptitle);
+transition: .3s;
+}
+
+header .close-model:hover{
+    font-size: 1.6rem;
+    color:crimson;
+    transform: rotate(180deg);
+}
+
+
+
+
+/*/////////// 3- model  === pop up ///////*/
+ 
+   header .fixed{
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    background-color: rgba(40, 40, 40, 0.91);
+   
+    backdrop-filter: blur(4px);
+    
+  }
+
+
+
+
+  header .fixed  ul.model{
+    width: 75%;
+    margin: auto;
+    margin-top:2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    animation: move .7s 1;
+  }
+  
+  @keyframes move{
+    0% {scale:0;}
+    60% {scale:1.2;}
+    100% {scale:1;}
+  }
+
+
+  header .fixed  ul.model li {
+    border-bottom: 1px solid var(--border);
+    padding: .77rem 0px .5rem 0px;
+    
+  }
+
+  header .fixed  ul.model li:last-child{
+
+    border: none;
+   
+  }
+
+  header .fixed  ul.model li:first-child{
+
+    border: none;
+    text-align: right;
+    padding: .2rem 0px 0px;
+    margin-bottom: -1rem;
+    
+   
+  }
+
+  header .fixed  ul.model li a {
+    font-size: 1.5rem;
+  }
+
+  /* header .fixed  ul.model li button.close-model{
+    color: red;
+    margin-left: 1500px;
+  } */
+
+
+  
+
+  
+
+
+  
+
+
+
+
+
+/*////////////////// 4-responsive /////*/
+
+@media (max-width:700px){
+    header.flex nav{
+        display: none;}
+
+    header button.menu{
+        display: block;
+    }
+
+}

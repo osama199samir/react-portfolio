@@ -1,0 +1,108 @@
+/*/////////////////////
+
+table of contents
+////////////////////
+
+1-Left Section
+1-Right Section  ==> Animation
+
+
+
+
+*/
+
+
+section.hero{
+    margin-top:3rem ;
+}
+
+
+/*//////////////////////   1-Left Section   ////////////////////*/
+
+
+section.hero .left-section{
+    flex-grow: 1;
+}
+
+section.hero .parent-pic.flex{
+    align-items: end;
+    gap:.1rem;
+}
+
+section.hero .parent-pic .pic{
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid darkorange;
+    padding: 1px;
+    box-shadow: 1px 1px 40px rgba(203, 200, 200, 0.286) inset;
+}
+
+section.hero .marked i.check{
+    color: var(--blue);
+    font-size: 1.1rem;
+    display: block;
+   
+}
+
+
+ section.hero h2.title{
+    font-size: 2.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 24px 0px;
+    color: var(--title);
+    line-height: 3.3rem;
+}
+
+section.hero p.para{
+    color: var(--suptitle);
+    font-size: .9rem;
+    line-height: 1.7rem;
+    margin-bottom: 32px;
+
+}
+
+
+section.hero ul.icons {
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--suptitle);
+    
+}
+
+
+section.hero ul.icons li{
+    transition: .3s;
+}
+
+
+
+section.hero ul.icons li:hover{
+    color: var(--icon-hover);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+/*//////////////////////   2-Right Section  ==> animation   ////////////////////*/
+
+section.hero .animation{
+    transform: translate(50px , 50px);
+    width: 100%;
+}
+
+
+
+
+
+/*//////////  responsie  ///////////////*/
+
+@media (max-width:1200px){
+    
+    section.hero .animation{
+        display: none;
+    }
+}
